@@ -62,13 +62,23 @@ Area| Tech Stack|
 ***
 
 <details>
-<summary> <h1>Front-end</h1></summary>
+<summary> <h3>Front-end</h3></summary>
+ 
+- 근무 조건 선택, 공고 리스트, 상세 정보 반환 페이지 구현
+ 
+- 상세 지역 선택, 스크랩, 서비스 대상 선택 모달창 구현
+ 
+- 카카오 API 연동을 통해 조건 선택에 부합하는 공고 리스트와 지도를 화면에 반환
+ 
+- AWS S3로 정적 배포 후 Github action을 통해 main 브랜치에 Pull Request를 트리거로 CI/CD
+ 
 </details>
 
 <details>
-<summary> <h1>Back-end </h2></summary>
+<summary> <h3>Back-end </h3></summary>
 
 - 지역(시,동,구), 직종, 재택여부, 근무기간 조건을 가지고 동적 쿼리를 통해 해당 조건에 부합하는 공고 리스트 반환
+ 
 - 공고 리스트에서 특정 공고를 클릭하면 상세 정보 반환
 
 ### ERD
@@ -78,6 +88,7 @@ Area| Tech Stack|
 ### Trouble Shooting
 
 - Spring security를 이용해서 로그인 기능을 구현하려 했으나, 프론트와 백엔드 서버가 분리되어있었고 최신 Chrome 환경에서 쿠키를 설정하기 위해서는 Same-Site = none, Secure = true 설정이 들어가야 했습니다. 그래서 쿠키 설정을 변경하였으나 백엔드 서버로 https요청을 보낼때만 쿠키값이 설정이 되어서 백엔드 서버를 nginx, ssl을 통해 https 요청을 받을려고 했습니다. 하지만 ssl 인증서를 받기위해서는 도메인을 가지고 있어야했기에 결국에는 프로젝트에서 로그인 기능을 제외하고 구현하였습니다.
+ 
 - 조건이 4개이고 어떤 조건에는 값이 넘어오지 않을 수 있는 상황에서 Spring Data Jpa가 기본으로 제공해주는 Criteria을 사용하기에는 Criteria는 팀원들이 이해하기 힘든 코드를 만들기 쉬웠기에 과감하게 QueryDsl을 도입했습니다.  기존 동적쿼리를 생성하는 과정을 Method Chaining을 통해 쉽게 관리하였고 특히 조건을 필터링하는 Where 문에 각 조건에 맞는 메서드를 재정의하는 즉 리팩터링 과정을 통해 팀원들이 이해하기 쉬운 코드를 만들었습니다.
 
 </details>
