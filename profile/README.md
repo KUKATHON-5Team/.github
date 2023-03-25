@@ -11,25 +11,35 @@ http://kukathon-5team.s3-website.ap-northeast-2.amazonaws.com/
 
 
 
+***
+
+### 서비스 구조
+<img src="https://user-images.githubusercontent.com/99026631/227745222-0a951744-b629-4e15-a68a-402d96d04593.png" width="800px"/>
+
+### 서비스 플로우
+<img src="https://user-images.githubusercontent.com/99026631/227745248-e3e4ea6e-8a6b-45c6-a043-a17ecb1f44a1.png" width="800px"/>
+
+
+
 
 ***
-## Features
+# Features
 
-### 일자리 찾기
-<img src="https://user-images.githubusercontent.com/99026631/227742943-bbba90be-e878-4321-bb47-87c5275c2195.png" width="400px"/>
+## 일자리 찾기
+<img src="https://user-images.githubusercontent.com/99026631/227745337-5071a838-2fbf-48ac-bfb9-dd4638b304f0.png" width="400px"/>
 자기 자신에게 맞는 일자리 찾기
 
-### 일자리 리스트 업
-<img src="https://user-images.githubusercontent.com/99026631/227743005-05019957-e5ca-4560-a1e0-131aa93f89e4.png" width="400px"/>
+## 일자리 리스트 업
+<img src="https://user-images.githubusercontent.com/99026631/227745393-e49c9144-0ae7-4527-8bc2-e0eb43c32d03.png" width="400px"/>
 자기 자신에게 맞는 일자리 리스트 업
 
-### 스트랩 기능
-<img src="https://user-images.githubusercontent.com/99026631/227743052-b5ebb159-2f79-4c87-97c8-dcea68324eda.png" width="400px"/>
+## 스트랩 기능
+<img src="https://user-images.githubusercontent.com/99026631/227745433-f9dc10a7-0a7e-4e79-b2ad-f5a82b3369f2.png" width="400px"/>
 <br/>
 자기가 관리하는 노인분들 스트랩
 
-### 상세 페이지
-<img src="https://user-images.githubusercontent.com/99026631/227743101-6d200d43-6c18-4ac6-a4e4-2f27ff841ca6.png" width="400px"/>
+## 상세 페이지
+<img src="https://user-images.githubusercontent.com/99026631/227745453-19721f9c-dfa8-4417-8040-2d3415bf15f3.png" width="400px"/>
 <br/>
 자신이 고른 일자리 상세 보기
 
@@ -52,7 +62,11 @@ Area| Tech Stack|
 ***
 
 <details>
-<summary> <h2>Back-end </h2></summary>
+<summary> <h1>Front-end</h1></summary>
+</details>
+
+<details>
+<summary> <h1>Back-end </h2></summary>
 
 - 지역(시,동,구), 직종, 재택여부, 근무기간 조건을 가지고 동적 쿼리를 통해 해당 조건에 부합하는 공고 리스트 반환
 - 공고 리스트에서 특정 공고를 클릭하면 상세 정보 반환
